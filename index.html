@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="logic.js"></script>
+</head>
+<body>
+<h1>Contact Me - Graphic Design Orders</h1>
+<form action="mailto:katarina.zakova@stuba.sk" method="post" enctype="text/plain" id="contact-form">
+    <!-- Text Fields -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    <span id="text-error" class="error"></span><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <span id="email-error" class="error"></span><br><br>
+
+    <!-- Larger textarea for order details -->
+    <label for="order-details">Order Details:</label>
+    <textarea id="order-details" name="order-details" rows="5" placeholder="Describe your order" required></textarea>
+
+    <!-- Urgency Options -->
+    <label for="urgent">Is this order urgent?</label>
+    <select id="urgent" name="urgent">
+        <option value="yes-1-2-days">Yes, within 1-2 days</option>
+        <option value="not-urgent">Not urgent</option>
+        <option value="1-2-weeks">Within 1-2 weeks</option>
+    </select>
+
+    <!-- Contact Method Options and Dynamic Phone Input -->
+    <p>Preferred contact method:</p>
+    <input type="radio" id="email-contact" name="contact-method" value="email" checked>
+    <label for="email-contact">Email</label>
+
+    <input type="radio" id="phone-contact" name="contact-method" value="phone">
+    <label for="phone-contact">Phone</label>
+
+    <!-- Phone Number Input -->
+    <div id="phone-input" style="display: none;">
+        <label for="phone-code">Phone Code:</label>
+        <select id="phone-code" name="phone-code">
+            <option value="sk">+421 Slovakia</option>
+            <option value="ua">+380 Ukraine</option>
+        </select>
+        <label for="phone-number"></label><input type="text" id="phone-number" name="phone-number" placeholder="Enter the rest of your phone number">
+    </div>
+
+    <!-- Hidden Input (name) -->
+    <input type="hidden" id="hidden-name" name="hidden-name" value="Your Name Here">
+
+    <!-- Date Field (Calendar and Validation) -->
+    <label for="date">Preferred date for consultation:</label>
+    <input type="text" id="date" name="date" placeholder="dd.mm.yyyy" required>
+    <span id="error-message" style="color:red;"></span>
+
+    <!-- Submit Button -->
+    <div>
+        <button type="submit" id="submit-button" disabled>Submit</button>
+    </div>
+
+</form>
+
+
+
+</body>
+</html>

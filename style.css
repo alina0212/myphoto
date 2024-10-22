@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #fc55f5;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #c143bc;
+}
+
+#submit-button:disabled {
+    background-color: gray; /* Gray when disabled */
+    cursor: not-allowed; /* Show not-allowed cursor */
+}
+
+#phone-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#phone-input select,
+#phone-input input {
+    width: calc(50% - 5px);
+}
+
+.contact-method {
+    display: flex;       /* Aligns items in one row */
+    align-items: center; /* Centers radio button, text, and icon vertically */
+    margin-bottom: 20px; /* Adds space between the radio button options */
+}
+
+.contact-method label {
+    display: flex;
+    align-items: center; /* Ensures icon and text are aligned */
+    margin-left: 10px;    /* Adds space between radio button and text */
+}
+
+.contact-method img {
+    margin-left: 8px;    /* Adds space between text and icon */
+}
+
